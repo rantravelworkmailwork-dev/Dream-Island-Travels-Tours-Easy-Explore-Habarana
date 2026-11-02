@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy Explore Habarana | 4 Days Tour</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar site-nav sticky-top shadow-sm">
+    <div class="container-fluid container-lg d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center gap-3 text-wrap m-0" href="#">
+        <img src="images/dream island logo.jpeg" alt="Dream Island Travels Logo" class="brand-logo" />
+        <div>
+          <span class="brand-title">Dream Island Travels &amp; Tours Pvt Ltd</span>
+          <span class="brand-subtitle">Tailor-Made Holidays across Sri Lanka</span>
+        </div>
+      </a>
+      <div class="d-none d-lg-block nav-motto">Your Dream, Our Destination</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <p class="hero-kicker">CULTURE • WILDLIFE • ADVENTURES</p>
+      <h1>Easy Explore Habarana</h1>
+      <p class="hero-tagline">Prepared for Mr. Asiri Rathnayake</p>
+      <div class="hero-rule"></div>
+      <div class="hero-meta">
+        <span>03 Nights / 04 Days</span>
+        <span>10th January 2027 to 13th January 2027</span>
+        <span>Half Board (HB)</span>
+        <span>2 Adults + 01 Child</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- INTRO / ABOUT SIGIRIYA REGION -->
+    <section class="luxe-card accent">
+      <h3 class="section-title">About the Sigiriya Region</h3>
+      <p class="section-sub">Heart of Sri Lanka’s Cultural Triangle</p>
+      <p class="intro-lead">Located in the heart of Sri Lanka’s Cultural Triangle, the Sigiriya region is one of the island’s most captivating destinations.</p>
+      <p class="intro-body mb-2">Surrounded by Sigiriya, Dambulla, and Habarana, this remarkable area offers an ideal blend of ancient heritage, wildlife, nature, and authentic village experiences. Visitors can explore the world-famous Sigiriya Rock Fortress, a UNESCO World Heritage Site renowned for its ancient frescoes, landscaped gardens, and breathtaking panoramic views. Nearby, the Dambulla Cave Temple features impressive Buddhist cave shrines adorned with centuries-old murals and statues. Habarana is the perfect base for discovering the region’s natural beauty, including wildlife safaris, traditional village tours, scenic lakes, and encounters with Sri Lanka’s famous elephant populations. Together, these attractions create an unforgettable cultural and nature experience.</p>
+    </section>
+
+    <!-- KEY FACTS -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Tour Name</span><span class="fact-value">Easy Explore Habarana</span><span class="fact-note">Sri Lanka</span></div></div>
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Guest Name</span><span class="fact-value">Mr. Asiri Rathnayake</span><span class="fact-note">Private Chauffeur Tour</span></div></div>
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Duration &amp; Dates</span><span class="fact-value">3N / 4D</span><span class="fact-note">10 Jan 2027 – 13 Jan 2027</span></div></div>
+      <div class="col-6 col-md-3"><div class="fact"><span class="fact-label">Guests &amp; Meal Plan</span><span class="fact-value">2 Adults + 01 Child</span><span class="fact-note">Half Board (HB)</span></div></div>
+    </div>
+
+    <!-- MAP -->
+    <section class="luxe-card">
+      <h4 class="section-title">Your Route</h4>
+      <p class="section-sub">Pickup at Colombo &rarr; Transfer via Nikaweratiya &rarr; Amaya Lake Hotel (Habarana) &rarr; Drop-off at Colombo.</p>
+      <div id="sri-lanka-map"></div>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="luxe-card">
+      <h4 class="section-title">Experiences Included</h4>
+      <p class="section-sub">Guests may enjoy all of the following activities or select those that best match their interests.</p>
+      <div>
+        <span class="tag">🛕 Dambulla Cave Temple</span>
+        <span class="tag">🐘 Habarana Elephant Safari</span>
+        <span class="tag">🥾 Sigiriya Rock Fortress</span>
+        <span class="tag">⛰️ Pidurangala Rock</span>
+        <span class="tag">🌾 Traditional Village Tour</span>
+        <span class="tag">💃 Sri Lankan Cultural Show</span>
+        <span class="tag">🌿 Ayurveda Massage</span>
+      </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section class="mb-4">
+      <h4 class="mb-3">Day-by-Day Itinerary</h4>
+
+      <div class="accordion" id="itineraryAccordion">
+
+        <!-- Day 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#day1">
+              <span class="day-no">Day 1</span> Colombo to Habarana via Nikaweratiya (10th Jan 2027)
+            </button>
+          </h2>
+          <div id="day1" class="accordion-collapse collapse show" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p>Pick up from Colombo by your private air-conditioned vehicle and chauffeur. Journey towards Habarana via Nikaweratiya, taking in the scenic countryside stops and activities along the way. Arrive at Amaya Lake Hotel, check in, and spend the rest of the day unwinding by the lake.</p>
+                  <div>
+                    <span class="tag">🚗 Colombo Pick-Up</span>
+                    <span class="tag">🏞️ Travel via Nikaweratiya</span>
+                    <span class="tag">🏨 Hotel Check-In &amp; Relaxation</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Amaya Lake Hotel (Standard Villa Double Room)<br><strong>Meals:</strong> Dinner &nbsp;|&nbsp; Night 1 of 3</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/amaya.jpeg" alt="Amaya Lake Hotel" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day2">
+              <span class="day-no">Day 2</span> Sigiriya &amp; Cultural Experiences (11th Jan 2027)
+            </button>
+          </h2>
+          <div id="day2" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p><span class="slot">Morning</span>Climb the iconic Sigiriya Rock Fortress or take in breathtaking views from Pidurangala Rock.</p>
+                  <p><span class="slot">Afternoon</span>Immerse yourself in authentic rural lifestyle with a Traditional Village Tour and relax with a Sri Lankan Ayurveda Massage.</p>
+                  <p><span class="slot">Evening</span>Enjoy a vibrant Sri Lankan Cultural Show featuring traditional music and dancing.</p>
+                  <div>
+                    <span class="tag">🥾 Sigiriya Rock Fortress</span>
+                    <span class="tag">⛰️ Pidurangala Rock</span>
+                    <span class="tag">🌾 Traditional Village Tour</span>
+                    <span class="tag">🌿 Ayurveda Massage</span>
+                    <span class="tag">💃 Sri Lankan Cultural Show</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Amaya Lake Hotel (Standard Villa Double Room)<br><strong>Meals:</strong> Breakfast &amp; Dinner &nbsp;|&nbsp; Night 2 of 3</div>
+                </div>
+                <div class="col-lg-5"><div class="day-photo-grid"><img src="images/culturalshow.jpg" alt="Sigiriya Rock" /></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day3">
+              <span class="day-no">Day 3</span> Dambulla &amp; Habarana Wildlife (12th Jan 2027)
+            </button>
+          </h2>
+          <div id="day3" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                  <p><span class="slot">Morning</span>Visit the historic Dambulla Cave Temple to explore its UNESCO-listed ancient rock cave shrines and statues.</p>
+                  <p><span class="slot">Afternoon</span>Embark on an exciting Habarana Elephant Safari to encounter wild elephants in their natural habitat.</p>
+                  <div>
+                    <span class="tag">🛕 Dambulla Cave Temple</span>
+                    <span class="tag">🐘 Habarana Elephant Safari</span>
+                  </div>
+                  <div class="stay-info"><strong>Overnight:</strong> Amaya Lake Hotel (Standard Villa Double Room)<br><strong>Meals:</strong> Breakfast &amp; Dinner &nbsp;|&nbsp; Night 3 of 3</div>
+                </div>
+                <div class="col-lg-5">
+                  <div class="day-photo-grid">
+                    <img src="images/elephant_safari.jpg" alt="Elephant safari" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#day4">
+              <span class="day-no">Day 4</span> Habarana to Colombo via Nikaweratiya (13th Jan 2027)
+            </button>
+          </h2>
+          <div id="day4" class="accordion-collapse collapse" data-bs-parent="#itineraryAccordion">
+            <div class="accordion-body">
+              <p>After breakfast, check out from Amaya Lake Hotel. Enjoy a comfortable return drive back to Colombo via Nikaweratiya with your private chauffeur, concluding your memorable getaway.</p>
+              <div class="stay-info"><strong>Drop-Off:</strong> Private transfer back to Colombo.<br><strong>Meals:</strong> Breakfast</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ACCOMMODATION -->
+    <section class="luxe-card">
+      <h4 class="section-title">Your Accommodations</h4>
+      <p class="section-sub">Confirmed stay based on your package details.</p>
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="hotel-card">
+            <div class="hotel-head"><h5>Habarana / Sigiriya</h5><span>03 Nights &bull; Half Board (HB)</span></div>
+            <ul class="hotel-list">
+              <li><strong>Amaya Lake Hotel</strong> — Arranged 2 Standard Villa Double Rooms</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEAL NOTE -->
+    <section class="note">
+      <h5>Meal Plan</h5>
+      <p>Your stay is on a Half Board (HB) basis at Amaya Lake Hotel, with breakfast and dinner included. Lunches and beverages throughout the tour are not included.</p>
+    </section>
+
+    <!-- GUIDANCE -->
+    <section class="note">
+      <h5>Your Journey, Your Comfort</h5>
+      <p>Your chauffeur will assist you throughout the journey from Colombo to Habarana via Nikaweratiya and back, ensuring a smooth and personalized travel experience.</p>
+    </section>
+
+    <!-- INCLUSIONS / EXCLUSIONS -->
+    <section class="luxe-card">
+      <h4 class="mb-3">Package Details</h4>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="package-box">
+            <h5>The above package includes</h5>
+            <ul class="package-list">
+              <li>Arrange 2 Standard Villa Double Rooms with Breakfast &amp; Dinner (HB) basis at Amaya Lake Hotel.</li>
+              <li>Driver accommodation and expenses.</li>
+              <li>Transportation by fully air-conditioned vehicle during the tour.</li>
+              <li>All toll, parking, and cost of fuel.</li>
+              <li>Travelling from Colombo to Amaya Lake Hotel via Nikaweratiya, enjoying the activities along the way, and returning from Amaya Lake Hotel to Colombo via Nikaweratiya.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="package-box excluded">
+            <h5>The above package does not include</h5>
+            <ul class="package-list">
+              <li>Early check-in and late check-out costs.</li>
+              <li>Cost of lunch and beverages throughout the tour.</li>
+              <li>Expenses of a personal nature.</li>
+              <li>Any other services not specified above.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLICIES -->
+    <section class="luxe-card">
+      <h4 class="section-title mb-1">Policies &amp; Conditions</h4>
+      <p class="section-sub mb-4">Essential information regarding your booking, stay, and cancellations.</p>
+
+      <div class="policy-stack">
+
+        <!-- 1. General Conditions -->
+        <div class="policy-subcard">
+          <h5 class="policy-subcard-title"><span>01</span> General &amp; Excursion Conditions</h5>
+          <ul class="package-list">
+            <li>Optional excursions and additional services can be provided at an extra charge.</li>
+            <li>Visits to wildlife parks will be at the client's own risk.</li>
+            <li>Safari vehicles (non-air-conditioned) available are very basic; insurance coverage is not comprehensive as in the case of vehicles used for main tours.</li>
+          </ul>
+        </div>
+
+        <!-- 2. Hotel Rules -->
+        <div class="policy-subcard">
+          <h5 class="policy-subcard-title"><span>02</span> Hotel Rules &amp; Timing</h5>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="timing-badge">
+                <span class="timing-label">Official Check-In</span>
+                <span class="timing-value">13:00 hrs</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="timing-badge">
+                <span class="timing-label">Official Check-Out</span>
+                <span class="timing-value">11:00 hrs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Child Policy -->
+        <div class="policy-subcard">
+          <h5 class="policy-subcard-title"><span>03</span> Child Policy</h5>
+          <div class="row g-2 align-items-center">
+            <div class="col-md-4">
+              <div class="child-tier">
+                <span class="tier-age">0 – 5.99 Years</span>
+                <span class="tier-price fee-none">Free of charge</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="child-tier">
+                <span class="tier-age">6 – 11.99 Years</span>
+                <span class="tier-price">50% of package rate</span>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="child-tier">
+                <span class="tier-age">12+ Years</span>
+                <span class="tier-price">Adult rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Cancellation Policy -->
+        <div class="policy-subcard">
+          <h5 class="policy-subcard-title"><span>04</span> Cancellation Policy</h5>
+          <div class="table-responsive">
+            <table class="luxe-table">
+              <thead>
+                <tr>
+                  <th>Notice Prior to Arrival</th>
+                  <th class="num">Cancellation Fee (% of total)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0 – 15 days</td>
+                  <td class="num fee-high">100%</td>
+                </tr>
+                <tr>
+                  <td>16 – 21 days</td>
+                  <td class="num">80%</td>
+                </tr>
+                <tr>
+                  <td>22 – 30 days</td>
+                  <td class="num">50%</td>
+                </tr>
+                <tr>
+                  <td>Over 31 days</td>
+                  <td class="num fee-none">No cancellation fee</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="agency-footer">
+    <div class="container px-3">
+      <div class="footer-top-row">
+        <div class="d-flex align-items-center gap-3">
+          <img src="images/dream island logo.jpeg" alt="Dream Island Logo" class="footer-logo">
+          <div>
+            <h5>Dream Island Travels &amp; Tours Pvt Ltd</h5>
+            <span class="footer-sub">Tailor-Made Holidays across Sri Lanka</span>
+          </div>
+        </div>
+        <div class="footer-tagline text-md-end">
+          <span class="d-block footer-tagline-main">Culture &bull; Wildlife &bull; Adventures</span>
+          <span class="footer-tagline-sub">&ldquo;Your Dream, Our Destination&rdquo;</span>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-lg-8">
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex align-items-start gap-2">
+              <span>📍</span>
+              <a href="https://maps.app.goo.gl/XyPVxmkMoir6SZHaA?g_st=awb" target="_blank" rel="noopener" class="footer-contact-text">357/1, Waththegedara, Vithikuliya, Sri Lanka</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span>✉️</span>
+              <a href="mailto:Info@dreamislandtravels.com" class="footer-contact-text">Info@dreamislandtravels.com</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1877F2" class="flex-shrink-0" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-contact-text">facebook.com/dreamislandtravels</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span>🦉</span>
+              <a href="https://www.tripadvisor.co.uk/Attraction_Review-g293962-d34504009-Reviews-Dream_Island_Travels_Tours_Pvt_Ltd-Colombo_Western_Province.html" target="_blank" rel="noopener" class="footer-contact-text">TripAdvisor Reviews</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-lg-end">
+          <div class="contact-call-card d-inline-block text-start w-100">
+            <span class="label">Contact Us</span>
+            <a href="tel:+94743935369" class="phone-link d-block">+94 74 393 5369</a>
+            <a href="tel:+94767070706" class="phone-link d-block">+94 76 707 0706</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">&copy; Dream Island Travels &amp; Tours Pvt Ltd. All rights reserved. | Reg. No. PV00301414</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
